@@ -5,7 +5,6 @@ public class HelloWorld {
 	public HelloWorld(String msg) {
 		message = msg;
 	}
-	
 	public String display() {
 		return message;
 	}
