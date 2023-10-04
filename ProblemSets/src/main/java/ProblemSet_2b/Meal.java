@@ -7,12 +7,12 @@ public class Meal {
 		this.dessert = dessert;
 		this.mainCourse = mainCourse;
 	}
-    	public double calculateTotalSugarLevel() {
+    public double calculateTotalSugarLevel() {
     		return this.dessert.getAmountOfSugar()
     				+ this.mainCourse.getAmountOfSugar();
-    	}   	
-    	public String toString() {
+   	}
+    public String toString() {
     		return "Meal [mainCourse = " + this.mainCourse.getName()
-    		+ ", dessert = " + this.dessert.getName() + "]"; 		
+    		+ ", dessert = " + this.dessert.getName() + "]";
    	}
 }
