@@ -6,7 +6,8 @@ public class Employee {
 	private String surname;
 	private AnnualSalary salary;
 	private Position companyPosition;
-	public Employee(int id, String forename, String surname, AnnualSalary salary, Position companyPosition) {
+	public Employee(int id, String forename, String surname,
+			AnnualSalary salary, Position companyPosition) {
 		this.id = id;
 		this.forename = forename;
 		this.surname = surname;
@@ -41,13 +42,15 @@ public class Employee {
 	public String toString() {
 		if (eligibleForBonus()) {
 			return this.surname + ", " + this.forename
-					+ " (" + this.id + "): " + this.getPositionName()
+					+ " (" + this.id + "): "
+					+ this.getPositionName()
 					+ " at £" + this.getSalary()
 					+ " (£" + this.salary.calculateTax()
 					+ " tax) and is eligible for bonus.";
 		}
 		return this.surname + ", " + this.forename
-				+ " (" + this.id + "): " + this.getPositionName()
+				+ " (" + this.id + "): "
+				+ this.getPositionName()
 				+ " at £" + this.getSalary()
 				+ " (£" + this.salary.calculateTax()
 				+ " tax) and is not eligible for bonus.";
