@@ -1,7 +1,7 @@
 package ProblemSet_2c;
 
 public class Module {
-	private final String name = "COM1027";
+	private static final String NAME = "COM1027";
 	private Assessment assessment1;
 	private Assessment assessment2;
 	private Assessment assessment3;
@@ -18,6 +18,6 @@ public class Module {
 				+ assessment3.getMark() * 0.6;
 	}
 	public String toString() {
-		return name + " (" + calculateAverage() + "%)";
+		return NAME + " (" + calculateAverage() + "%)";
 	}
 }

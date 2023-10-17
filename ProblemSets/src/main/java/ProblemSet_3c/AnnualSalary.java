@@ -1,4 +1,4 @@
-package ProblemSet_3b;
+package ProblemSet_3c;
 
 public class AnnualSalary {
 	private double salary;
