@@ -23,7 +23,8 @@ public class Day {
 		String temp = "";
 		for (int i = 0; i < this.sessions.length; i++) {
 			if (this.sessions[i] != null) {
-				temp += this.sessions[i].getSessionName() + ": "
+				temp += this.sessions[i].getSessionName()
+					+ ": "
 					+ this.sessions[i].getStartTime() + " - "
 					+ this.sessions[i].getEndTime() + "\n";
 			}
