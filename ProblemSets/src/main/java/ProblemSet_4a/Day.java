@@ -25,8 +25,8 @@ public class Day {
 			if (this.sessions[i] != null) {
 				temp += this.sessions[i].getSessionName()
 					+ ": "
-					+ this.sessions[i].getStartTime() + " - "
-					+ this.sessions[i].getEndTime() + "\n";
+				+ this.sessions[i].getStartTime() + " - "
+				+ this.sessions[i].getEndTime() + "\n";
 			}
 		}
 		return temp;

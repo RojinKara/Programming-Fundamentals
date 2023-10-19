@@ -24,12 +24,12 @@ public class Classroom {
 		}
 		for (int i = 0; i < this.maxStudents.length; i++) {
 			if (this.maxStudents[i] != null) {
-				temp += this.maxStudents[i].getStudentDetails() + "\n";
+				temp += this.maxStudents[i].getStudentDetails()
+						+ "\n";
 			}
 		}
 		return temp;
 	}
-	
 	public int howManyStudents() {
 		int count = 0;
 		for (int i = 0; i < this.maxStudents.length; i++) {
