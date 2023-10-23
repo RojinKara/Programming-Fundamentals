@@ -27,7 +27,7 @@ public class Student {
 		return this.initial + ". "
 				+ this.surname + " "
 				+ this.calculateYearAverage()
-				+ "%";	
+				+ "%";
 	}
 	public String displayArray() {
 		String temp = "";
