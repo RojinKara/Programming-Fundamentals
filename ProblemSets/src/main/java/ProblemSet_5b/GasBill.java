@@ -14,7 +14,8 @@ public class GasBill {
 		this.customer = customer;
 	}
 	public boolean checkAccountAccuracy(String accountNumber) {
-		final Pattern pattern = Pattern.compile("G\\d{4}-\\d{4}-\\d{4}");
+		final Pattern pattern =
+			Pattern.compile("G\\d{4}-\\d{4}-\\d{4}");
 		if (!pattern.matcher(accountNumber).matches()) {
 			this.accountNumber = "Invalid Account";
 			return false;
