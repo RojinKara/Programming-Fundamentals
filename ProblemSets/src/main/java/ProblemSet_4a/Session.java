@@ -1,10 +1,11 @@
 package ProblemSet_4a;
 
 public class Session {
-	private String sessionName;
-	private int startTime;
-	private int endTime;
+	private String sessionName = null;
+	private int startTime = 0;
+	private int endTime = 0;
 	public Session(String sessionName, int startTime, int endTime) {
+		super();
 		this.sessionName = sessionName;
 		this.startTime = startTime;
 		this.endTime = endTime;
@@ -16,12 +17,12 @@ public class Session {
 		this.endTime = endTime;
 	}
 	public String getSessionName() {
-		return sessionName;
+		return this.sessionName;
 	}
 	public int getStartTime() {
-		return startTime;
+		return this.startTime;
 	}
 	public int getEndTime() {
-		return endTime;
+		return this.endTime;
 	}
 }

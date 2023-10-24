@@ -1,9 +1,10 @@
 package ProblemSet_2b;
 
 public class Meal {
-	private Food mainCourse;
-	private Food dessert;
+	private Food mainCourse = null;
+	private Food dessert = null;
 	public Meal(Food mainCourse, Food dessert) {
+		super();
 		this.dessert = dessert;
 		this.mainCourse = mainCourse;
 	}

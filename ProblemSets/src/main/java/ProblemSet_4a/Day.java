@@ -1,9 +1,10 @@
 package ProblemSet_4a;
 
 public class Day {
-	private String name;
+	private String name = null;
 	private Session[] sessions;
 	public Day(String name) {
+		super();
 		this.name = name;
 		this.sessions = new Session[4];
 	}
@@ -17,6 +18,9 @@ public class Day {
 	}
 	public Session getSessions(int index) {
 		return this.sessions[index];
+	}
+	public void display() {
+		System.out.println(this.toString());
 	}
 	@Override
 	public String toString() {

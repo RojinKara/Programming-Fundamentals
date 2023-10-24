@@ -1,9 +1,10 @@
 package ProblemSet_5a;
 
 public class RainfallYear {
-	private int year;
+	private int year = 0;
 	private double[] rainfallMonths;
 	public RainfallYear(int year) {
+		super();
 		this.rainfallMonths = new double[12];
 		this.year = year;
 	}

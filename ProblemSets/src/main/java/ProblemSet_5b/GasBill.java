@@ -3,10 +3,11 @@ package ProblemSet_5b;
 import java.util.regex.Pattern;
 
 public class GasBill {
-	private String accountNumber;
-	private double amount;
-	private Customer customer;
+	private String accountNumber = null;
+	private double amount = 0;
+	private Customer customer = null;
 	public GasBill(String accountNumber, double amount, Customer customer) {
+		super();
 		if (this.checkAccountAccuracy(accountNumber)) {
 			this.accountNumber = accountNumber;
 		}
@@ -30,10 +31,10 @@ public class GasBill {
 				+ this.amount + "0";
 	}
 	public String getAccountNumber() {
-		return accountNumber;
+		return this.accountNumber;
 	}
 	public String getCustomer() {
-		return customer.toString();
+		return this.customer.toString();
 	}
 	public String displayAmountDue() {
 		return "Amount due:£"

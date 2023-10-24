@@ -1,15 +1,16 @@
 package ProblemSet_4b;
 
 public class Classroom {
-	private String room;
+	private String room = null;
 	private static final int CAPACITY = 20;
 	private Student[] maxStudents;
 	public Classroom(String room) {
+		super();
 		this.room = room;
 		this.maxStudents = new Student[CAPACITY];
 	}
 	public String getRoom() {
-		return room;
+		return this.room;
 	}
 	public static int getCapacity() {
 		return CAPACITY;

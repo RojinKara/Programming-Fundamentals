@@ -1,10 +1,11 @@
 package ProblemSet_4c;
 
 public class Student {
-	private char initial;
-	private String surname;
+	private char initial = 0;
+	private String surname = null;
 	private Module[] modules;
 	public Student(char initial, String surname) {
+		super();
 		this.modules = new Module[8];
 		this.initial = initial;
 		this.surname = surname;

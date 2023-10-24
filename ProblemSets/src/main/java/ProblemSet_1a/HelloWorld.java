@@ -1,11 +1,12 @@
 package ProblemSet_1a;
 
 public class HelloWorld {
-	private String message = "";
-	public HelloWorld(String msg) {
-		message = msg;
+	private String message = null;
+	public HelloWorld(String message) {
+		super();
+		this.message = message;
 	}
 	public String display() {
-		return message;
+		return this.message;
 	}
 }

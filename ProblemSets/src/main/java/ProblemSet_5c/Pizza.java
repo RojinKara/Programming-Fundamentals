@@ -1,8 +1,9 @@
 package ProblemSet_5c;
 
 public class Pizza {
-	private String[] toppings;
+	private String[] toppings = null;
 	public Pizza() {
+		super();
 		this.toppings = new String[10];
 	}
 	public void addToppings(String[] toppings) {
