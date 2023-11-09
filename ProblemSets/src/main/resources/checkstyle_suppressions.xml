@@ -12,6 +12,7 @@
     <suppress files="." checks="MissingJavadocType"/>
     <suppress files="." checks="MissingJavadocMethod"/>
     <suppress files="." checks="MemberName"/>
+    <suppress files="." checks="TypeName"/>
 
 
     <suppress files="." checks="DesignForExtension"/>
