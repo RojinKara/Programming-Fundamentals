@@ -1,13 +1,13 @@
 package ProblemSet_6b;
 
-import java.lang.StringBuilder;
-
 public class Palette {
 	private P_COLOUR[] primaryColours = null;
-	public Palette () {
+	public Palette() {
+		super();
 		this.primaryColours = new P_COLOUR[3];
 	}
-	public Palette (P_COLOUR[] colourArray) throws IllegalArgumentException {
+	public Palette(P_COLOUR[] colourArray)
+			throws IllegalArgumentException {
 		super();
 		this.primaryColours = new P_COLOUR[3];
 		if (colourArray.length > 3) {
@@ -19,7 +19,8 @@ public class Palette {
 			}
 		}
 	}
-	public void addColour(P_COLOUR colour) throws IllegalArgumentException {
+	public void addColour(P_COLOUR colour)
+			throws IllegalArgumentException {
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (colour == this.primaryColours[i]) {
 				throw new IllegalArgumentException("Colour already added");
