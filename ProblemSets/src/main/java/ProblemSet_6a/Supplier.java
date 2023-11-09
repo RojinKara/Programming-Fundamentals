@@ -21,6 +21,6 @@ public class Supplier {
 	@Override
 	public String toString() {
 		return this.getName() + "("
-		+ this.getPhone() + ")";	
+		+ this.getPhone() + ")";
 	}
 }

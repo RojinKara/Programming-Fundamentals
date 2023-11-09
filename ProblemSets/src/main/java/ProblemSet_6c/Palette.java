@@ -22,7 +22,7 @@ public class Palette {
 			throws IllegalArgumentException {
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (colour == this.primaryColours[i]) {
-			throw new IllegalArgumentException("Colour already added");
+		throw new IllegalArgumentException("Colour already added");
 		} else if (this.primaryColours[i] == null && colour != null) {
 				this.primaryColours[i] = colour;
 				return;
