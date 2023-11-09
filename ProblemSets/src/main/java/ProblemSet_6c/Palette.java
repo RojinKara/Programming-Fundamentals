@@ -1,13 +1,12 @@
 package ProblemSet_6c;
 
-import java.lang.StringBuilder;
-
 public class Palette {
 	private P_COLOUR[] primaryColours = null;
-	public Palette () {
+	public Palette() {
 		this.primaryColours = new P_COLOUR[3];
 	}
-	public Palette (P_COLOUR[] colourArray) throws IllegalArgumentException {
+	public Palette(P_COLOUR[] colourArray)
+			throws IllegalArgumentException {
 		super();
 		this.primaryColours = new P_COLOUR[3];
 		if (colourArray.length > 3) {
@@ -19,11 +18,12 @@ public class Palette {
 			}
 		}
 	}
-	public void addColour(P_COLOUR colour) throws IllegalArgumentException {
+	public void addColour(P_COLOUR colour)
+			throws IllegalArgumentException {
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (colour == this.primaryColours[i]) {
-				throw new IllegalArgumentException("Colour already added");
-			} else if (this.primaryColours[i] == null && colour != null) {
+			throw new IllegalArgumentException("Colour already added");
+		} else if (this.primaryColours[i] == null && colour != null) {
 				this.primaryColours[i] = colour;
 				return;
 			}
@@ -34,7 +34,7 @@ public class Palette {
 		StringBuilder colours = new StringBuilder();
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (this.primaryColours[i] != null) {
-				colours.append(this.primaryColours[i]).append(", ");
+			colours.append(this.primaryColours[i]).append(", ");
 			}
 		}
 		if (colours.isEmpty()) {
@@ -48,11 +48,14 @@ public class Palette {
 		boolean blue = false;
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (this.primaryColours[i] != null) {
-				if (this.primaryColours[i].equals(P_COLOUR.RED)) {
+				if (this.primaryColours[i]
+						.equals(P_COLOUR.RED)) {
 					red = true;
-				} else if (this.primaryColours[i].equals(P_COLOUR.YELLOW)) {
+				} else if (this.primaryColours[i]
+						.equals(P_COLOUR.YELLOW)) {
 					yellow = true;
-				} else if (this.primaryColours[i].equals(P_COLOUR.BLUE)) {
+				} else if (this.primaryColours[i]
+						.equals(P_COLOUR.BLUE)) {
 					blue = true;
 				}
 			}

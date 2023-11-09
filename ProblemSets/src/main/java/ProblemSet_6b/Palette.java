@@ -23,8 +23,8 @@ public class Palette {
 			throws IllegalArgumentException {
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (colour == this.primaryColours[i]) {
-				throw new IllegalArgumentException("Colour already added");
-			} else if (this.primaryColours[i] == null && colour != null) {
+			throw new IllegalArgumentException("Colour already added");
+		} else if (this.primaryColours[i] == null && colour != null) {
 				this.primaryColours[i] = colour;
 				return;
 			}
@@ -35,7 +35,7 @@ public class Palette {
 		StringBuilder colours = new StringBuilder();
 		for (int i = 0; i < this.primaryColours.length; i++) {
 			if (this.primaryColours[i] != null) {
-				colours.append(this.primaryColours[i]).append(", ");
+			colours.append(this.primaryColours[i]).append(", ");
 			}
 		}
 		if (colours.isEmpty()) {
