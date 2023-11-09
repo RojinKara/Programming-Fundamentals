@@ -22,7 +22,6 @@ public class Student {
 		}
 	}
 	public int getUrn() {
-		// TODO Auto-generated method stub
 		return Integer.parseInt(this.urn);
 	}
 	public String getName() {
@@ -36,7 +35,8 @@ public class Student {
 	public String printModules() {
 		StringBuilder print =  new StringBuilder();
 		for (int i = 0; i < moduleList.size(); i++) {
-			print.append(this.moduleList.get(i).getName()).append(", ");
+			print.append(this.moduleList.get(i).getName())
+			.append(", ");
 		}
 		return print.toString().substring(0, print.length() - 2);
 	}
