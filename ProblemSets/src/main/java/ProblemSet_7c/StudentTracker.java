@@ -19,15 +19,15 @@ public class StudentTracker {
 		this.studentList.add(student);
 	}
 	private void initialiseMap() {
-		for (int i = 0; i < this.studentList.size(); i ++) {
+		for(int i = 0; i < this.studentList.size(); i ++) {
 			this.moduleList.put(this.studentList.get(i).getUrn(),
 					this.studentList.get(i));
 		}
 	}
 	public String printStudents() {
 		StringBuilder print = new StringBuilder();
-		for (int i = 0; i < this.studentList.size(); i++) {
-			print.append(this.studentList.get(i).toString()).append("\n");
+		for(int i = 0; i < this.studentList.size(); i++) {
+		print.append(this.studentList.get(i).toString()).append("\n");
 		}
 		return print.toString();
 	}
@@ -35,7 +35,7 @@ public class StudentTracker {
 		this.initialiseMap();
 		if (moduleList.containsKey(urn)) {
 			return "URN " + urn + " is enrolled in:\n"
-					+this.moduleList.get(urn).printModules();
+			+this.moduleList.get(urn).printModules();
 		}
 		return "URN " + urn + " is enrolled in:\n nothing";
 	}
