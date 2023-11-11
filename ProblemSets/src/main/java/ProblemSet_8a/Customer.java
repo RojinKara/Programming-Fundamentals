@@ -3,7 +3,7 @@ package ProblemSet_8a;
 public class Customer {
 	private String name = null;
 	private String surname = null;
-	public Customer(String name, String surname) 
+	public Customer(String name, String surname)
 			throws IllegalArgumentException {
 		super();
 		if (!validateInfo(name) || !validateInfo(surname)) {
@@ -29,4 +29,3 @@ public class Customer {
 		return this.name.charAt(0) + ". " + this.surname;
 	}
 }
-  
