@@ -41,4 +41,3 @@ public class GasBill {
                 + this.amount + "0";
     }
 }
-
