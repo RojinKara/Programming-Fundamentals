@@ -26,7 +26,7 @@ public class Counting {
         return print.toString();
     }
 
-    public String displayLine(String line, int count) {
-        return line + " : " + count + "\n";
+    public String displayLine(String line, int counter) {
+        return line + " : " + counter + "\n";
     }
 }
