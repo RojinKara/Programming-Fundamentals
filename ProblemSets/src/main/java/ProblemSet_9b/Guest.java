@@ -14,8 +14,8 @@ public class Guest implements IGuest {
                  String address, String telephone) {
         super();
         this.charges = new ArrayList<Charge>();
-        if (forename == null || surname == null ||
-                address == null || telephone == null) {
+        if (forename == null || surname == null
+                || address == null || telephone == null) {
             throw new NullPointerException("input was null");
         }
         this.forename = forename;
