@@ -1,9 +1,6 @@
 package ProblemSet_9c;
 
-import org.checkerframework.framework.qual.DefaultQualifier;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Hotel {
