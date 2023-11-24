@@ -62,7 +62,7 @@ public class Guest implements IGuest {
     @Override
     public String toString() {
         return this.forename + " " + this.surname
-                + " " + this.address + " " + this.telephone;
+                + ", " + this.address + ", " + this.telephone;
     }
 
     public String getForename() {
