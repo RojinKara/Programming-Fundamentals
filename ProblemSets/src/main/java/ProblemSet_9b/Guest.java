@@ -10,10 +10,12 @@ public class Guest implements IGuest {
     private String telephone = null;
     private List<Charge> charges = null;
 
-    public Guest(String forename, String surname, String address, String telephone) {
+    public Guest(String forename, String surname,
+                 String address, String telephone) {
         super();
         this.charges = new ArrayList<Charge>();
-        if (forename == null || surname == null || address == null || telephone == null) {
+        if (forename == null || surname == null ||
+                address == null || telephone == null) {
             throw new NullPointerException("input was null");
         }
         this.forename = forename;
