@@ -49,6 +49,7 @@ public class House {
         return this.numberOfRooms - this.rooms.size();
     }
 
+    //based on: https://sentry.io/answers/iterate-hashmap-java/
     public double getPrice() {
         double total = 0;
         for (Map.Entry<Room, ITenant> map : this.rooms.entrySet()) {
