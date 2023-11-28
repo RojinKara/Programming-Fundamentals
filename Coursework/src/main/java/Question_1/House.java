@@ -42,7 +42,8 @@ public class House {
     public String toString() {
         return this.houseNumber + " " + this.street + ", "
                 + this.city + " " + this.postCode + " ("
-                + this.numberOfRooms + " bedroom house :" + this.getAvailableRooms() + " available)";
+                + this.numberOfRooms + " bedroom house :"
+                + this.getAvailableRooms() + " available)";
     }
 
     public int getAvailableRooms() {

@@ -11,7 +11,8 @@ public class PropertyManagement {
         this.properties = new ArrayList<House>();
     }
 
-    public void addProperty(House p) throws IllegalArgumentException, NullPointerException {
+    public void addProperty(House p)
+            throws IllegalArgumentException, NullPointerException {
         if (p == null) {
             throw new NullPointerException("given house is null");
         }
@@ -37,7 +38,8 @@ public class PropertyManagement {
         return print.toString();
     }
 
-    public void removeProperty(House p) throws IllegalArgumentException, NullPointerException {
+    public void removeProperty(House p)
+            throws IllegalArgumentException, NullPointerException {
         if (p == null) {
             throw new NullPointerException("property is null");
         }
