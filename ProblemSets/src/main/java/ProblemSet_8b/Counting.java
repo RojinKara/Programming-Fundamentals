@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Counting {
     /**
-     * Creates the Counting object
+     * Creates the Counting object.
      */
     public Counting() {
         super();

@@ -9,7 +9,8 @@ public class Customer {
      *
      * @param name
      * @param surname
-     * @throws IllegalArgumentException called "Invalid" if name or surname is not validated
+     * @throws IllegalArgumentException called
+     *                                  "Invalid" if name or surname is not validated
      */
     public Customer(String name, String surname)
             throws IllegalArgumentException {
