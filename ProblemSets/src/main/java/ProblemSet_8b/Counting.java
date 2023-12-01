@@ -5,10 +5,22 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Counting {
+    /**
+     * Creates the Counting object
+     */
     public Counting() {
+        super();
     }
 
-    public String readTextFile(String file) {
+    /**
+     * Reads the TextFile and returns text and Line numbers.
+     *
+     * @param file
+     * @return text and Line Numbers
+     * @throws RuntimeException if the file can't be opened
+     */
+
+    public String readTextFile(String file) throws RuntimeException {
         StringBuilder print = new StringBuilder();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -25,6 +37,14 @@ public class Counting {
         }
         return print.toString();
     }
+
+    /**
+     * Formats the line.
+     *
+     * @param line
+     * @param counter
+     * @return line : number
+     */
 
     public String displayLine(String line, int counter) {
         return line + " : " + counter + "\n";

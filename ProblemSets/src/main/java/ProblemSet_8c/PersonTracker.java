@@ -9,7 +9,12 @@ import java.util.List;
 public class PersonTracker {
     private List<Person> peopleList = null;
 
+    /**
+     * Creates the PersonTracker Object.
+     */
+
     public PersonTracker() {
+        super();
         this.peopleList = new ArrayList<Person>();
     }
 
@@ -21,7 +26,15 @@ public class PersonTracker {
         return temp.toString();
     }
 
-    public String readTextFile(String file) {
+    /**
+     * Reads the TextFile and returns text.
+     *
+     * @param file
+     * @return text
+     * @throws RuntimeException if the file can't be opened
+     */
+
+    public String readTextFile(String file) throws RuntimeException {
         StringBuilder print = new StringBuilder();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -42,6 +55,14 @@ public class PersonTracker {
         String[] parts = line.split(" ");
         addPerson(parts[0], parts[1], Integer.parseInt(parts[2]));
     }
+
+    /**
+     * Adds a new person to the personList.
+     *
+     * @param n name of person
+     * @param s surname of person
+     * @param a age of person
+     */
 
     public void addPerson(String n, String s, int a) {
         this.peopleList.add(new Person(n, s, a));
