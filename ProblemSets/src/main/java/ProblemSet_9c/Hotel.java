@@ -4,8 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
+    /**
+     * Hotel's name.
+     */
     private String name = null;
+    /**
+     * Hotel's guests.
+     */
     private List<IGuest> guests = null;
+
+    /**
+     * Creates a Hotel object.
+     *
+     * @param name
+     */
 
     public Hotel(String name) {
         super();
@@ -13,9 +25,21 @@ public class Hotel {
         this.guests = new ArrayList<IGuest>();
     }
 
+    /**
+     * Adds guests to the guest list.
+     *
+     * @param guest
+     */
+
     public void addGuest(IGuest guest) {
         this.guests.add(guest);
     }
+
+    /**
+     * Outputs the guest list.
+     *
+     * @return name Hotel Guest List
+     */
 
     public String printGuestList() {
         StringBuilder temp = new StringBuilder(this.name

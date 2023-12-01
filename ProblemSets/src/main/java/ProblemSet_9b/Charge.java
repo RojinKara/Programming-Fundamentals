@@ -4,6 +4,15 @@ public class Charge {
     private Service service = null;
     private double charge = 0;
 
+    /**
+     * Creates a Charge Object.
+     *
+     * @param service
+     * @param charge
+     * @throws NullPointerException     if service is null
+     * @throws IllegalArgumentException if charge is less than 1
+     */
+
     public Charge(Service service, double charge)
             throws NullPointerException, IllegalArgumentException {
         super();
@@ -24,6 +33,12 @@ public class Charge {
     public Service getService() {
         return this.service;
     }
+
+    /**
+     * calculates VAT based on the rate.
+     *
+     * @return VAT
+     */
 
     public double calculateVAT() {
         return this.charge * this.service.getRate().getPercentage();
