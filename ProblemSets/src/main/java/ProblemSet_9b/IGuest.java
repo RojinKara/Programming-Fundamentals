@@ -8,7 +8,7 @@ public interface IGuest {
      * @param c charge
      */
 
-    void addCharge(Service s, double c);
+    public abstract void addCharge(Service s, double c);
 
     /**
      * Adds all the charges.
@@ -16,7 +16,7 @@ public interface IGuest {
      * @return total charges without VAT
      */
 
-    double calculateTotalChargeWithoutVAT();
+    public abstract double calculateTotalChargeWithoutVAT();
 
     /**
      * Calculates total VAT at rate.
@@ -25,7 +25,7 @@ public interface IGuest {
      * @return VAT at rate
      */
 
-    double calculateVATChargeAtRate(VATRate r);
+    public abstract double calculateVATChargeAtRate(VATRate r);
 
     /**
      * Calculates total charge including VAT.
@@ -33,12 +33,12 @@ public interface IGuest {
      * @return all charge and VATs
      */
 
-    double calculateTotalChargeIncVat();
+    public abstract double calculateTotalChargeIncVat();
 
     /**
      * Overrides toString.
      *
      * @return forename surname, address, telephone
      */
-    String toString();
+    public abstract String toString();
 }
