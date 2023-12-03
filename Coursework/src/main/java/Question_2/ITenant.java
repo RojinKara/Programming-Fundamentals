@@ -1,4 +1,4 @@
-package Question_1;
+package Question_2;
 
 public interface ITenant {
     public abstract int getAge();
