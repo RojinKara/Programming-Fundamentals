@@ -2,10 +2,25 @@ package Question_2;
 
 import java.util.Map;
 
-public class House extends Property {
-    public House(int houseNumber, String street, String city,
-                 String postCode, int numberOfRooms) {
+public class Flat extends Property {
+    private static final double MAINTENANCE_COSTS = 500;
+    private int floor = 0;
+
+    public Flat(int houseNumber, String street, String city,
+                String postCode, int numberOfRooms, int floor) {
         super(houseNumber, street, city, postCode, numberOfRooms);
+        this.floor = floor;
+    }
+
+    @Override
+    public String toString() {
+        int availableRooms = 0;
+        if (this.isAvailable()) {
+            availableRooms = this.getAvailableRooms();
+        }
+        return super.toString() + "flat on " + this.floor
+                + " floor :" + availableRooms
+                + " available)";
     }
 
     @Override
@@ -19,8 +34,9 @@ public class House extends Property {
 
     @Override
     public boolean isAvailable() {
-        return this.getAvailableRooms() > 0;
+        return this.rooms.isEmpty();
     }
+
 
     @Override
     public void occupy(Room r, ITenant t)
@@ -32,15 +48,12 @@ public class House extends Property {
             throw new IllegalArgumentException("room is not available");
         }
         if (!this.isAvailable()) {
-            throw new IllegalArgumentException("house is not available");
+            throw new IllegalArgumentException("flat is not available");
+        }
+        if (!t.getType().equals(TenantType.PROFESSIONAL)) {
+            return;
         }
         this.rooms.put(r, t);
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + " house :"
-                + this.getAvailableRooms() + " available)";
     }
 
     @Override
@@ -49,7 +62,7 @@ public class House extends Property {
         for (Map.Entry<Room, ITenant> map : this.rooms.entrySet()) {
             output.append("\tRoom: ").append(map.getKey().getPrice()).append("\n");
         }
-        double total = this.getPrice() * 12;
+        double total = this.getPrice() * super.getNumberOfRooms() * 12 + MAINTENANCE_COSTS;
         output.append("\tTotal: £").append(String.format("%.2f", total))
                 .append(" (Council Tax: £").append(this.councilTax).append(")\n");
         return output.toString();
