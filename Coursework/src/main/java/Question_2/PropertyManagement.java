@@ -41,7 +41,8 @@ public class PropertyManagement {
     public int numberOfPropertyType(String type) {
         int temp = 0;
         for (int i = 0; i < this.properties.size(); i++) {
-            if (this.properties.get(i).getClass().getSimpleName().equalsIgnoreCase(type)) {
+            if (this.properties.get(i).getClass().getSimpleName()
+                    .equalsIgnoreCase(type)) {
                 temp++;
             }
         }

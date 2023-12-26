@@ -60,11 +60,14 @@ public class Flat extends Property {
     public String displayOccupiedProperty() {
         StringBuilder output = new StringBuilder(this.toString() + "\n");
         for (Map.Entry<Room, ITenant> map : this.rooms.entrySet()) {
-            output.append("\tRoom: ").append(map.getKey().getPrice()).append("\n");
+            output.append("\tRoom: ")
+                    .append(map.getKey().getPrice()).append("\n");
         }
-        double total = this.getPrice() * super.getNumberOfRooms() * 12 + MAINTENANCE_COSTS;
+        double total = this.getPrice() * super.getNumberOfRooms() * 12
+                + MAINTENANCE_COSTS;
         output.append("\tTotal: £").append(String.format("%.2f", total))
-                .append(" (Council Tax: £").append(this.councilTax).append(")\n");
+                .append(" (Council Tax: £")
+                .append(this.councilTax).append(")\n");
         return output.toString();
     }
 }
