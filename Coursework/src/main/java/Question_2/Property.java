@@ -52,7 +52,22 @@ public abstract class Property {
     }
 
     public void setCouncilTax(double tax) {
-        this.councilTax = tax;
+        int numberOfStudents = 0;
+        int numberOfProfessionals = 0;
+        double temp = 0;
+        for (Map.Entry<Room, ITenant> entry : this.rooms.entrySet()) {
+            if (entry.getValue().getType().equals(TenantType.STUDENT)) {
+                numberOfStudents += 1;
+            } else if (entry.getValue().getType().equals(TenantType.PROFESSIONAL)) {
+                numberOfProfessionals += 1;
+            }
+        }
+        if (numberOfProfessionals == 1) {
+            temp = 0.75;
+        } else if (numberOfStudents == 0) {
+            temp = 1;
+        }
+        this.councilTax = councilTax * temp;
     }
 
     public int getNumberOfRooms() {
