@@ -58,7 +58,8 @@ public abstract class Property {
         for (Map.Entry<Room, ITenant> entry : this.rooms.entrySet()) {
             if (entry.getValue().getType().equals(TenantType.STUDENT)) {
                 numberOfStudents += 1;
-            } else if (entry.getValue().getType().equals(TenantType.PROFESSIONAL)) {
+            } else if (entry.getValue().getType()
+                    .equals(TenantType.PROFESSIONAL)) {
                 numberOfProfessionals += 1;
             }
         }
