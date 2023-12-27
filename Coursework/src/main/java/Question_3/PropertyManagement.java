@@ -66,7 +66,8 @@ public class PropertyManagement {
         return String.format("Confirmed Tenant Summary:\n17-25:%d"
                         + "\n26-35:%d\n36-49:%d\n50-60:%d\n60+:%d\n*****\n"
                         + "Professional:%d\nStudent:%d", ageGroup1, ageGroup2,
-                ageGroup3, ageGroup4, ageGroup5, numOfProfessionals, numOfStudents);
+                ageGroup3, ageGroup4, ageGroup5,
+                numOfProfessionals, numOfStudents);
     }
 
     public String displayProperties() {
