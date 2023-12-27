@@ -33,7 +33,11 @@ public class PropertyManagement {
     public String displayProperties() {
         StringBuilder print = new StringBuilder();
         for (int i = 0; i < this.properties.size(); i++) {
-            print.append(this.properties.get(i).toString()).append("\n");
+            if (this.properties.get(i).isAvailable()) {
+                print.append(this.properties.get(i).toString()).append("\n");
+            } else {
+                print.append(this.properties.get(i).displayOccupiedProperty());
+            }
         }
         return print.toString();
     }

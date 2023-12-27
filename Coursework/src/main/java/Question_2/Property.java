@@ -68,7 +68,7 @@ public abstract class Property {
         } else if (numberOfStudents == 0) {
             temp = 1;
         }
-        this.councilTax = councilTax * temp;
+        this.councilTax = tax * temp;
     }
 
     public int getNumberOfRooms() {
