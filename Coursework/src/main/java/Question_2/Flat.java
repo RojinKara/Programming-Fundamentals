@@ -18,7 +18,7 @@ public class Flat extends Property {
         if (this.isAvailable()) {
             availableRooms = this.getAvailableRooms();
         }
-        return super.toString() + "flat on " + this.floor
+        return super.toString() + " flat on " + this.floor
                 + " floor :" + availableRooms
                 + " available)";
     }
