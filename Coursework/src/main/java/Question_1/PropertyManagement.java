@@ -42,8 +42,10 @@ public class PropertyManagement {
      * @param p property
      * @param r room
      * @param t tenant
-     * @throws NullPointerException     if  house property or room or tenant is null.
-     * @throws IllegalArgumentException if the room is already occupied by a tenant.
+     * @throws NullPointerException     if  house property or
+     *                                  room or tenant is null.
+     * @throws IllegalArgumentException if the room is
+     *                                  already occupied by a tenant.
      */
     public void addTenant(House p, Room r, ITenant t)
             throws NullPointerException, IllegalArgumentException {

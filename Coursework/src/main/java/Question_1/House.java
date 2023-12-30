@@ -68,7 +68,8 @@ public class House {
      *
      * @param r room
      * @param t tenant
-     * @throws IllegalArgumentException if the room is already occupied by a tenant.
+     * @throws IllegalArgumentException if the room is
+     *                                  already occupied by a tenant.
      * @throws NullPointerException     if the room or tenant is null.
      */
     public void occupy(Room r, ITenant t) {
