@@ -63,6 +63,14 @@ public class House {
         return this.getAvailableRooms() > 0;
     }
 
+    /**
+     * Occupies new tenants to the rooms.
+     *
+     * @param r room
+     * @param t tenant
+     * @throws IllegalArgumentException if the room is already occupied by a tenant.
+     * @throws NullPointerException     if the room or tenant is null.
+     */
     public void occupy(Room r, ITenant t) {
         if (r == null || t == null) {
             throw new NullPointerException("things are null");
