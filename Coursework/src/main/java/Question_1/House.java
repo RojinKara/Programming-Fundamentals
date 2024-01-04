@@ -69,7 +69,8 @@ public class House {
      * @param r room
      * @param t tenant
      * @throws IllegalArgumentException if the room is
-     *                                  already occupied by a tenant.
+     *                                  already occupied by a tenant
+     *                                  and not available.
      * @throws NullPointerException     if the room or tenant is null.
      */
     public void occupy(Room r, ITenant t) {
@@ -79,15 +80,18 @@ public class House {
         if (!this.isAvailable()) {
             throw new IllegalArgumentException("room is not available");
         }
+        if (this.rooms.containsKey(r)) {
+            throw new IllegalArgumentException("Room is already occupied");
+        }
         this.rooms.put(r, t);
     }
 
     private boolean validateCity(String input) {
-        return input.matches("[A-Z][a-z]*");
+        return input.matches("^[A-Z][a-z]*");
     }
 
     private boolean validatePostCode(String input) {
         return input.replace(" ", "")
-                .matches("GU\\d{2}[A-Z]{2}");
+                .matches("^GU\\d{2}[A-Z]{2}$");
     }
 }

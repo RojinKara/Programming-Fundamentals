@@ -84,14 +84,16 @@ public class PropertyManagement {
 
     public String findProblematicProperty() {
         int highest = 0;
-        int index = -1;
+        int index = 0;
+        boolean temp = false;
         for (int i = 0; i < this.properties.size(); i++) {
             if (this.properties.get(i).calculateImpact() > highest) {
                 highest = this.properties.get(i).calculateImpact();
                 index = i;
+                temp = true;
             }
         }
-        if (index == -1) {
+        if (!temp) {
             return "no problematic properties";
         }
         return this.properties.get(index).toString();
@@ -114,6 +116,9 @@ public class PropertyManagement {
             if (this.properties.get(i).councilTax == 0) {
                 temp++;
             }
+        }
+        if (temp == 0) {
+            return 0;
         }
         return (temp / this.properties.size()) * 100;
     }

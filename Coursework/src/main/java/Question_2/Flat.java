@@ -13,6 +13,14 @@ public class Flat extends Property {
     }
 
     @Override
+    public int getAvailableRooms() {
+        if (this.rooms.isEmpty()) {
+            return this.getNumberOfRooms();
+        }
+        return 0;
+    }
+
+    @Override
     public String toString() {
         int availableRooms = 0;
         if (this.isAvailable()) {
@@ -29,7 +37,7 @@ public class Flat extends Property {
         for (Map.Entry<Room, ITenant> map : this.rooms.entrySet()) {
             total += map.getKey().getPrice();
         }
-        return total;
+        return total * this.getNumberOfRooms();
     }
 
     @Override
@@ -63,7 +71,7 @@ public class Flat extends Property {
             output.append("\tRoom: ")
                     .append(map.getKey().getPrice()).append("\n");
         }
-        double total = this.getPrice() * super.getNumberOfRooms() * 12
+        double total = this.getPrice() * 12
                 + MAINTENANCE_COSTS;
         output.append("\tTotal: £").append(String.format("%.2f", total))
                 .append(" (Council Tax: £")

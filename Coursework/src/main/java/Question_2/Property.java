@@ -57,10 +57,10 @@ public abstract class Property {
         double temp = 0;
         for (Map.Entry<Room, ITenant> entry : this.rooms.entrySet()) {
             if (entry.getValue().getType().equals(TenantType.STUDENT)) {
-                numberOfStudents += 1;
+                numberOfStudents++;
             } else if (entry.getValue().getType()
                     .equals(TenantType.PROFESSIONAL)) {
-                numberOfProfessionals += 1;
+                numberOfProfessionals++;
             }
         }
         if (numberOfProfessionals == 1) {
@@ -84,11 +84,11 @@ public abstract class Property {
     public abstract String displayOccupiedProperty();
 
     private boolean validateCity(String input) {
-        return input.matches("[A-Z][a-z]*");
+        return input.matches("^[A-Z][a-z]*");
     }
 
     private boolean validatePostCode(String input) {
         return input.replace(" ", "")
-                .matches("GU\\d{2}[A-Z]{2}");
+                .matches("^GU\\d{2}[A-Z]{2}$");
     }
 }

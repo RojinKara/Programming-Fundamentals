@@ -13,6 +13,14 @@ public class Flat extends Property {
     }
 
     @Override
+    public int getAvailableRooms() {
+        if (this.rooms.isEmpty()) {
+            return this.getNumberOfRooms();
+        }
+        return 0;
+    }
+
+    @Override
     public String toString() {
         int availableRooms = 0;
         if (this.isAvailable()) {

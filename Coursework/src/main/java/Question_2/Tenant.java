@@ -32,6 +32,7 @@ public class Tenant implements ITenant {
         return this.age;
     }
 
+    @Override
     public String getName() {
         return this.forename + " " + this.surname;
     }

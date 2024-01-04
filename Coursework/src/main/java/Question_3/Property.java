@@ -51,7 +51,11 @@ public abstract class Property {
                 + this.numberOfRooms + " bedroom";
     }
 
-    public void addComplaint(Complaint c) {
+    public void addComplaint(Complaint c)
+            throws NullPointerException {
+        if (c == null) {
+            throw new NullPointerException("complaint was null");
+        }
         this.complaints.add(c);
     }
 

@@ -12,10 +12,10 @@ public class Tenant implements ITenant {
         if (forename == null || surname == null || type == null) {
             throw new NullPointerException("they are null");
         }
-        if (!forename.matches("[A-Z][a-z]*")) {
+        if (!forename.matches("^[A-Z][a-z]*")) {
             throw new IllegalArgumentException("forename invalid");
         }
-        if (!surname.matches("[A-Z][a-z]*")) {
+        if (!surname.matches("^[A-Z][a-z]*")) {
             throw new IllegalArgumentException("surname invalid");
         }
         if (age < 17) {
@@ -32,6 +32,7 @@ public class Tenant implements ITenant {
         return this.age;
     }
 
+    @Override
     public String getName() {
         return this.forename + " " + this.surname;
     }
